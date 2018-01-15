@@ -56,3 +56,15 @@ print("Player badge is \(playerBadge)")
 
 // use underscore to ignore the value returned from a function
 _ = assignBadgeToPlayer(playerScore: 100)
+
+// A function can have different argument label and parameter name
+// Argument lablel will be used when calling a function
+// parameter name(s) will be used internally within the function
+// Syntax: func <function_name>(<argument_label> parameter_name: <type>){..}
+func totalPlayTime(start level1Time: Int, end level2Time: Int) -> String {
+	let totalTime = level1Time + level2Time
+	return "Total Game time: \(totalTime/60)minutes \(totalTime%60)seconds"
+}
+
+let playerTimeSpent = totalPlayTime(start: 600, end: 450)
+print(playerTimeSpent)
