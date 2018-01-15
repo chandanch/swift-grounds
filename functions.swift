@@ -68,3 +68,14 @@ func totalPlayTime(start level1Time: Int, end level2Time: Int) -> String {
 
 let playerTimeSpent = totalPlayTime(start: 600, end: 450)
 print(playerTimeSpent)
+
+// In order to omit passing the argument lablel while calling a function we
+// need to use the _ before the parameter name
+// syntax: func <function_name>(_ <parameter_type>: <data_type>)
+func showPlayerName(_ name: String) {
+	print("Player name is \(name)")
+}
+
+// once we add a rule using the (_) to omit the argument label in the function
+// definition we don't need to add the argument label when calling the function
+showPlayerName("Harry")
