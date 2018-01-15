@@ -1,0 +1,14 @@
+/*
+* String interpolation
+* Combine string literals with the dynamic data
+*/
+
+var playername = "Samules"
+
+var playerScore = 456
+
+var playTime = 340
+
+let playerDetails = "Player \(playername) has played the game for \(playTime/60)m \(playTime%60)s with a score of \(playerScore)";
+
+print(playerDetails)
