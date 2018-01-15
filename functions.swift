@@ -53,3 +53,6 @@ func assignBadgeToPlayer(playerScore: Int) -> String {
 
 let playerBadge = assignBadgeToPlayer(playerScore: playerScore)
 print("Player badge is \(playerBadge)")
+
+// use underscore to ignore the value returned from a function
+_ = assignBadgeToPlayer(playerScore: 100)
