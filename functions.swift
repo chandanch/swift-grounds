@@ -63,7 +63,7 @@ _ = assignBadgeToPlayer(playerScore: 100)
 // Syntax: func <function_name>(<argument_label> parameter_name: <type>){..}
 func totalPlayTime(start level1Time: Int, end level2Time: Int) -> String {
 	let totalTime = level1Time + level2Time
-	return "Total Game time: \(totalTime/60)minutes \(totalTime%60)seconds"
+	return "Total Game time: \(totalTime/60) minutes \(totalTime%60) seconds"
 }
 
 let playerTimeSpent = totalPlayTime(start: 600, end: 450)
