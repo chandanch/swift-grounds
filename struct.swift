@@ -28,7 +28,7 @@ struct BankAccount {
 	}
 } 
 
-// creating an instance of struct
+// creating an instance of struct using initilizer method or memberwise initializer
 var harryAccount = BankAccount(customerName: "Harry Forher", accountBalance: 2300, accountType: "checkings", hasLoanAccount: false)
 
 // accessing the properties of an Struct
