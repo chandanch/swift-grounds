@@ -36,3 +36,10 @@ for (code, countryName) in countryCodes {
 	print(code)
 	print(countryName)
 }
+
+// removing a key value pair from dictonary
+countryCodes["AU"] = nil;
+
+for country in countryCodes {
+	print(country)
+}
