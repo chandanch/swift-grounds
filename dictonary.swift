@@ -1,6 +1,6 @@
 /*
 * Dictonary
-* Dictonaries is an un ordered collection of key value pairs
+* Dictonaries is an un ordered collection of key value pairs of similar data
 * syntax:
 	var <dictonary_name>: ["key_Type": "value_Type"]
 				OR
