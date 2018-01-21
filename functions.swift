@@ -1,81 +1,77 @@
 /*
-* Functions
-* Functions help to group a block of code, helps to give a meaningful name to it
-* and which can be used multiple times.
-* syntax: 
-func <function_name>() {
-	// code block
+* Enums
+* Helps to define custom types or user defined types and to specify a set of  
+* possible values for a given for the custom type
+* Each possible value represents an enum case
+* Syntax:
+enum <EnumName> {
+	case <value>
+	case <value>
+	....
 }
 */
 
-// create a basic function without any parameters
-func basicFunction() {
-	print("Basic function worked")
+enum GameType {
+	case action
+	case mythology
+	case rolePlaying
 }
 
-basicFunction()
+// accessing the value of enum
+// In order to access the value of enum first declare a variable of enum type
+var favGameType: GameType
+// using the Custom enum type & dot operator get the possbile values
+// syntax: <variable_name> = <EnumType>.<value>
+favGameType = GameType.rolePlaying 
+print("My Fav game type is \(favGameType)")
 
-// function with parameters Note: Every parameter in a function is a constant
-func showPlayerDetails(name: String, score: Int, email: String) {
-	print("Player \(name) has scored \(score). Registered email is \(email)")
+// shorthand way of accessing enum value
+favGameType = .action
+print("My Fav game type is now \(favGameType)")
+
+// another way of creating enum: each enum case is separated by comma
+enum SportGames {
+	case cricket, football, hockey, volley_ball
 }
 
-// call a function by specifying the argument label and its value delimited by (:)
-// syntax: <function_name>(argumentLabel:<value>,...)
-showPlayerDetails(name: "Heroku", score: 340, email: "heroku@swift.com")
+// creating a variable of enum type and accessing the enum value in the same line
+var mySport: SportGames = .football
+print("My sport is \(mySport)")
 
-// function with parameters and which returns value
-func calculateTotalScore(level1Score: Int, level2Score: Int) -> Int {
-	let totalScore = level1Score + level2Score
-	return totalScore
+// raw values: We can create an enum of a specific data type and also specify 
+// each enum case with a predefined value or default value
+// synatax: case <enumCase> = <default_value>
+enum GameRating: String {
+	case infant = "pegi3"
+	case children = "pegi7"
+	case adoloscence = "pegi13"
+	case adult = "pegi18"
+} 
+
+var gameRating: GameRating
+// accessing the enum case
+gameRating = GameRating.children;
+// accessing the raw value of the enum case
+print(gameRating.rawValue)
+
+// associated values: We can also define a data type for each enum case
+enum GameInfo {
+	case graphicsType(String)
+	case gameLength(Int)
+	case price(Int)
 }
 
-var playerScore = calculateTotalScore(level1Score: 300, level2Score: 300)
-print("Player's Total Score is \(playerScore)");
+// specify an associated for the enum case
+var myGame: GameInfo = .graphicsType("3d");
 
-// Function type: We define a function type by looking at the function 
-// parameters and its return type
-// The below function type is: This function takes a single parameter of int type and returns a string
-func assignBadgeToPlayer(playerScore: Int) -> String {
-	switch playerScore {
-		case 0...200:
-			return "Amature"
-		case 201...400:
-		return "Semi-pro"
-		case 401...600:
-			return "pro"
-		case 601...1000:
-			return "Legend"
-		default:
-			return "Invalid"
-	}
+switch myGame {
+	case .graphicsType(let graphics):
+		print("Graphics type is \(graphics)")
+	case .gameLength(let gameDuration):
+		print("This game takes \(gameDuration)")
+	case .price(let cost):
+		print("This game costs \(cost)")
+	
 }
 
-let playerBadge = assignBadgeToPlayer(playerScore: playerScore)
-print("Player badge is \(playerBadge)")
-
-// use underscore to ignore the value returned from a function
-_ = assignBadgeToPlayer(playerScore: 100)
-
-// A function can have different argument label and parameter name
-// Argument lablel will be used when calling a function
-// parameter name(s) will be used internally within the function
-// Syntax: func <function_name>(<argument_label> parameter_name: <type>){..}
-func totalPlayTime(start level1Time: Int, end level2Time: Int) -> String {
-	let totalTime = level1Time + level2Time
-	return "Total Game time: \(totalTime/60) minutes \(totalTime%60) seconds"
-}
-
-let playerTimeSpent = totalPlayTime(start: 600, end: 450)
-print(playerTimeSpent)
-
-// In order to omit passing the argument lablel while calling a function we
-// need to use the _ before the parameter name
-// syntax: func <function_name>(_ <parameter_type>: <data_type>)
-func showPlayerName(_ name: String) {
-	print("Player name is \(name)")
-}
-
-// once we add a rule using the (_) to omit the argument label in the function
-// definition we don't need to add the argument label when calling the function
-showPlayerName("Harry")
+//print("My game graphics is \(myGame)")
