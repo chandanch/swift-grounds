@@ -40,3 +40,9 @@ func showPlayTime() -> (timeSpent: String, grade: String) {
 // creating a variable of tuple type
 var (gameTime, gamerGrade) = showPlayTime();
 print("Game time: \(gameTime)\nGrade: \(gamerGrade)")
+
+var playerInfoDict = ["name": "Cohan", "grade": "pro"]
+// the (key, value) in for-in loop is a tuple when iterating through a dictonary
+for (playername, playergrade) in playerInfoDict {
+	print("\(playername)  \(playergrade)")
+}
