@@ -12,3 +12,6 @@ var playTime = 340
 let playerDetails = "Player \(playername) has played the game for \(playTime/60)m \(playTime%60)s with a score of \(playerScore)";
 
 print(playerDetails)
+
+// another example for interpolation
+print("Player Bonus \(playerScore + 50)");
