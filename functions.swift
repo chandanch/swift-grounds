@@ -69,7 +69,7 @@ func totalPlayTime(start level1Time: Int, end level2Time: Int) -> String {
 let playerTimeSpent = totalPlayTime(start: 600, end: 450)
 print(playerTimeSpent)
 
-// In order to omit passing the argument lablel while calling a function we
+// In order to omit passing the argument label while calling a function we
 // need to use the _ before the parameter name
 // syntax: func <function_name>(_ <parameter_type>: <data_type>)
 func showPlayerName(_ name: String) {
