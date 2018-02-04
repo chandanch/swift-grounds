@@ -64,13 +64,13 @@ let sortedPlayers = allPlayers.sorted(by: {
 })
 
 // Method 4: Trailing closure
-// let sortedPlayers = allPlayers.sorted(by:) {
-// 	if $1.playerScore <= $0.playerScore {
-// 		return true;
-// 	} else {
-// 		return false;
-// 	}
-// }
+let sortedPlayers = allPlayers.sorted(by:) {
+	if $1.playerScore <= $0.playerScore {
+		return true;
+	} else {
+		return false;
+	}
+}
 
 //Method 6: Refined trailing closure. Since the closure would return bool we return the 
 // truthness or falseness of a condition directly without the return statement
