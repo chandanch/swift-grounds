@@ -22,7 +22,7 @@ if(middleName != nil) {
 	print("Traveller name: \(firstName + middleName! + lastName)");
 }
 
-// optional unwrapping
+// optional binding
 if let newEmail = secondaryEmail {
 	print("Email: \(newEmail)")
 }
