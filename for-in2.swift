@@ -1,7 +1,7 @@
 /*
 * For-in loop
 * Executes statements or a block of code multiple times unitl the condition is 
-* is true or holds
+* is true or until the condtion holds good
 * With for-in loop we don't need to track indexes, increment indexes
 * Avoids off-by-one error
 */
