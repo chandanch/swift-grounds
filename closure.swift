@@ -33,18 +33,18 @@ func sortByHigScore(firstPlayer: Player, secondPlayer: Player) -> Bool {
 }
 
 // passing the `sortByHigScore` as a parameter to sorted method of the array
-//let sortedPlayers = allPlayers.sorted(by: sortByHigScore)
+let sortedPlayers = allPlayers.sorted(by: sortByHigScore)
 
 // Method2: a classic use of closure. Good approach but still very verborse
-// let sortedPlayers = allPlayers.sorted(by: {
-// 	(firstPlayer: Player, secondPlayer: Player) -> Bool
-// 	in
-// 	if secondPlayer.playerScore <= firstPlayer.playerScore {
-// 		return true;
-// 	} else {
-// 		return false;
-// 	}
-// })
+let sortedPlayers = allPlayers.sorted(by: {
+	(firstPlayer: Player, secondPlayer: Player) -> Bool
+	in
+	if secondPlayer.playerScore <= firstPlayer.playerScore {
+		return true;
+	} else {
+		return false;
+	}
+})
 
 // Method 3: Using implicit automatic parameters provided by the methoid that expects closure
 /*
@@ -80,6 +80,3 @@ let sortedPlayers = allPlayers.sorted { $1.playerScore <= $0.playerScore }
 for player in sortedPlayers {
 	print("Player name: \(player.playerName) Player Score: \(player.playerScore)")
 }
-
-
- 
