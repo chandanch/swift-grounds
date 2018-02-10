@@ -46,7 +46,7 @@ let sortedPlayers = allPlayers.sorted(by: {
 	}
 })
 
-// Method 3: Using implicit automatic parameters provided by the methoid that expects closure
+// Method 3: Using implicit automatic parameters provided by the method that expects closure
 /*
 * Defining the parameters and parameter types are optional since the 
 * closure of the method knows the number of parameters and automatically infers the type for each parameter. 
