@@ -7,7 +7,6 @@ extension <Existing_type> {
 	func <method_name>() {....}
 }
 */
-
 extension String {
 	func modifyString() -> String{
 		// self contains the current string that is passed to the `modifyString()`
