@@ -38,7 +38,7 @@ enum SportGames {
 var mySport: SportGames = .football
 print("My sport is \(mySport)")
 
-// raw values: We can create an enum of a specific data type and also specify 
+// Raw values: We can create an enum of a specific data type and also specify 
 // each enum case with a predefined value or default value
 // synatax: case <enumCase> = <default_value>
 enum GameRating: String {
