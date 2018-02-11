@@ -64,7 +64,7 @@ class Player {
 
 var keemer = Player()
 keemer.name = "Elison Keemer"
-// keemer.livesRemaining
+keemer.livesRemaining = 1
 keemer.currentLevel = 2
 keemer.coinsCollected = 500
 // print the computed score
