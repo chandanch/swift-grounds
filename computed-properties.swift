@@ -1,3 +1,29 @@
+/*
+* Computed properties
+* Computes or calculates the value of property every time we ask for it
+* Computed properties stores dynamic values based on the computation output
+* Computed properties consits of get block and set block
+* Set block sets a new value to the computed property
+* Set block is a void block and cannot return a value
+* Get block performs the computation and returns the computed value. The get block is  
+* read-only block and must always return a value
+* Syntax:
+var <property_name>: type {
+	get {
+	  ....
+	}
+	OR(If the property has only get block then no need to explicitly specify get 
+    keyword. we can omit it and swift compiler will automatically take it as get block     or read-only property)
+	return ......
+	set {
+	  ....
+	}
+	OR
+	set(<variable_name>) {
+	  <variable_name> + 40
+	}
+}
+*/
 class Player {
 	
 	// stored properties
@@ -41,6 +67,7 @@ keemer.name = "Elison Keemer"
 // keemer.livesRemaining
 keemer.currentLevel = 2
 keemer.coinsCollected = 500
+// print the computed score
 print("Player \(keemer.name) Score is \(keemer.score)")
 
 var gohome = Player();
@@ -49,6 +76,7 @@ gohome.livesRemaining = 3
 gohome.currentLevel = 4
 gohome.coinsCollected = 700
 print("Player \(gohome.name) score is \(gohome.score)")
+// set the bonus value
 gohome.bonus = 2
+// get the computed bonus value
 print("Player bonus is \(gohome.bonus)")
-
