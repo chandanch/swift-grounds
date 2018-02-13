@@ -7,6 +7,13 @@
   either {get} or {get set} specifier
 * Methods in protocol must contain the method name. It may optionally contain the parameters. If it contains parameters then the type for each parameters must be specified
 * Methods in protocal may optionally specify the return type
+* Syntax:
+protocol <Protocol_Name> {
+	// methods
+	func <method_name>()
+	// properties
+	var <property_name>: <Type> {get set}
+}
 */
 protocol PlayerProtocal {
 	
