@@ -28,7 +28,7 @@ protocol PlayerProtocal {
 	var level: Int
 }
 
-// adopting to protocol
+// adopting a protocol
 // Syntax: <classname>: <Protocol_name>
 class Player: PlayerProtocal {
 	
@@ -52,6 +52,7 @@ class Player: PlayerProtocal {
 	
 }
 
+// creating instance of Player class
 var sam = Player(playerName: "Sam Wohlin", currentLevel: 2);
 sam.showPlayerDetails();
 let totalScore = sam.calcuateScore(bonus: 200, livesRemaining: 2)
