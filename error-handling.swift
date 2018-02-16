@@ -78,6 +78,6 @@ if(fileUploadStatus != nil) {
 // Method 3: Using try ?
 // This method takes result of the try as an optional.
 // since the try now returns an optional value, we use the if let syntax. If the value not nil then we print the upload status
-if let imageUploadStatus = try? checkUploadStatus(status: 5) {
+if let imageUploadStatus = try? checkUploadStatus(status: 2) {
 	print(imageUploadStatus)
 }
