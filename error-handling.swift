@@ -71,6 +71,7 @@ do {
 
 // if the value is not nil print out the file upload status
 if(fileUploadStatus != nil) {
+	// force unwrap a value
 	print(fileUploadStatus!)
 }
 
