@@ -12,7 +12,6 @@ func uploadFile() {
 	}
 	
 	// close the channel once all the files are uploaded
-	
 	defer {
 		// channel will be closed once the execution of function is finised at the end
 		channel.close()
