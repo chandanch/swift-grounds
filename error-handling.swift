@@ -58,3 +58,25 @@ do {
 } catch {
 	print("Oops! Some error occurred \(error)")
 }
+
+// Method 2: Ignore error : Using opionals
+let fileUploadStatus: String?
+
+do {
+	fileUploadStatus = try checkUploadStatus(status: 2)
+} catch {
+	// if error set the value to nil
+	fileUploadStatus = nil
+}
+
+// if the value is not nil print out the file upload status
+if(fileUploadStatus != nil) {
+	print(fileUploadStatus!)
+}
+
+// Method 3: Using try ?
+// This method takes result of the try as an optional.
+// since the try now returns an optional value, we use the if let syntax. If the value not nil then we print the upload status
+if let imageUploadStatus = try? checkUploadStatus(status: 5) {
+	print(imageUploadStatus)
+}
