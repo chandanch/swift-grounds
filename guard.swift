@@ -1,3 +1,9 @@
+/*
+* Guard
+* Checks if the optional has a value or not.
+* If the optional has a value then the value can be stored in other variable or a constant and can used in other parts of the code once the guard is over
+* Guard presvers the value of optionals unlike the if let statement
+*/
 func showPlayerDetails(name: String?, score: Int?, flower: String?) {
 	// check if the optional paramter is nil. If not nil save the value in a vsariable or constant. If nil exist immediately
 	guard let playerName = name else {return}
