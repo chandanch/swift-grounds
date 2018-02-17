@@ -4,4 +4,4 @@
 
 # swift-grounds
 
-Covering the basic concepts of swift for Swift foundation tutorials
+Covering the fundamental concepts in Swift programming language with examples
