@@ -3,4 +3,6 @@
 
 # swift-grounds
 
-Covering the fundamental concepts in Swift programming language with examples
+Covering the fundamental concepts in Swift programming language with examples.
+
+All concepts covered uses swift 4
