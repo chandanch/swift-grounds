@@ -5,4 +5,4 @@
 
 Covering the fundamental concepts in Swift programming language with examples.
 
-All concepts covered uses swift 4
+All concepts covered uses swift 4 as on 02.28.2018
