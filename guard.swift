@@ -24,3 +24,5 @@ func showGameDetails(name: String?, score: Int?, flower: String?) {
 	// using the variable holding the optional value once the guard statement is over
 	print("Player name: \(playerName)\nPlayer Score: \(playerScore)\nPlayer Flower: \(playerFlower)")
 }
+
+showGameDetails(name: "Dominic", score: 23, flower: "FOP")
